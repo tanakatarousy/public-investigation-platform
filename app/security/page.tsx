@@ -1,0 +1,3 @@
+import type {Metadata} from "next";import {PublicShell} from "../components/PublicShell";import {BRAND} from "../brand-config";import {publicMetadata} from "../seo";
+export const metadata:Metadata=publicMetadata({path:"/security",title:`セキュリティ・脆弱性報告｜${BRAND.name}`,description:"脆弱性報告の方法、検証時のお願い、当サイトのセキュリティ対策方針を説明します。"});
+export default function Page(){return <PublicShell kicker="SECURITY" title="セキュリティ・脆弱性報告"><div className="prose"><h2>報告方法</h2><p>脆弱性の疑いはContactの「セキュリティ」から、再現手順・影響範囲・確認環境を送ってください。目撃情報は送らないでください。</p><h2>お願い</h2><p>実データの取得、権限昇格の継続、サービス妨害、第三者情報の閲覧は行わず、最小限の検証で停止してください。</p><h2>防御方針</h2><p>CSP、nosniff、Referrer Policy、Permissions Policy、HSTS、入力検証、SQL bind、Origin確認、request size limit、Rate Limit、Turnstile、honeypot、管理者認証、監査ログを適用します。</p></div></PublicShell>}

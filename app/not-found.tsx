@@ -1,0 +1,1 @@
+import Link from "next/link";export default function NotFound(){return <main className="error-page"><p className="kicker">404 / NOT FOUND</p><h1>この公開情報は見つかりません</h1><p>URLが変更されたか、情報が撤回された可能性があります。</p><Link href="/">トップへ戻る</Link></main>}

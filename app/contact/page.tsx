@@ -1,0 +1,4 @@
+import type {Metadata} from "next";import Script from "next/script";import {PublicShell} from "../components/PublicShell";import {BRAND} from "../brand-config";import {publicMetadata} from "../seo";import {runtimeEnv} from "../server/platform-db";import {ContactForm} from "./contact-form";
+export const dynamic="force-dynamic";
+export const metadata:Metadata=publicMetadata({path:"/contact",title:`運営への問い合わせ｜${BRAND.name}`,description:"サイトへの質問、掲載情報の訂正、表示不具合、取材、権利、セキュリティに関する運営窓口です。"});
+export default async function Page(){let key:string|undefined;try{key=(await runtimeEnv()).TURNSTILE_SITE_KEY}catch{}return <PublicShell kicker="CONTACT / SITE OPERATOR" title="運営への問い合わせ" intro="サイトへの質問、情報修正、表示不具合、取材・権利に関する連絡窓口です。目撃情報の提供先ではありません。"><ContactForm turnstileSiteKey={key}/>{key&&<Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="afterInteractive"/>}</PublicShell>}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <filter id="paper" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".035 .42" numOctaves="2" seed="17" stitchTiles="stitch"/><feColorMatrix values=".18 0 0 0 .38  0 .18 0 0 .36  0 0 .18 0 .31  0 0 0 .42 0"/></filter>
+  <rect width="160" height="160" filter="url(#paper)" opacity=".082"/>
+  <g fill="none" stroke="#635d52" stroke-width=".32" opacity=".058"><path d="M-12 18C34 10 67 31 175 20M-18 83C38 69 105 96 177 78M-4 136C47 128 89 149 168 132"/><path d="M19-12C26 33 8 85 23 174M91-8C82 38 102 104 87 169M144-10C137 42 153 95 141 170"/></g>
+  <g fill="none" stroke="#8d8577" stroke-width=".25" opacity=".075"><path d="M8 48l25 3m41-15 19 4m22 65 28-2M45 119l18 5M116 15l21 2"/><path d="M52 6l-2 19m56 27 3 22M34 91l-1 17m116 27-3 19"/></g>
+</svg>

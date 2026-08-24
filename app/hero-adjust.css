@@ -1,0 +1,139 @@
+.hero > .enso {
+  opacity: 0.34;
+  object-fit: contain;
+}
+
+.hero > .mountains {
+  height: auto;
+  object-fit: contain;
+  object-position: center bottom;
+  opacity: 0.52;
+}
+
+.theme-label {
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--ink-soft);
+}
+
+.menu-shell summary {
+  list-style: none;
+}
+
+.menu-shell summary::-webkit-details-marker {
+  display: none;
+}
+
+.menu-shell[open] .menu-button {
+  position: fixed;
+  top: 20px;
+  right: clamp(28px, 5vw, 88px);
+  z-index: 1001;
+}
+
+.menu-shell[open] .menu-button i:first-child {
+  top: 16px;
+  transform: rotate(45deg);
+}
+
+.menu-shell[open] .menu-button i:nth-child(2) {
+  top: 16px;
+  width: 23px;
+  transform: rotate(-45deg);
+}
+
+.menu-shell[open] .menu-button span {
+  opacity: 0;
+}
+
+.menu-overlay {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.75fr) minmax(360px, 1.25fr);
+  gap: 10vw;
+  align-items: center;
+  padding: clamp(90px, 11vw, 150px) clamp(28px, 8vw, 140px);
+  background: rgba(250, 249, 245, 0.97);
+  backdrop-filter: blur(12px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  animation: menu-fade 0.2s ease both;
+}
+
+.menu-heading > span {
+  font: 9px Georgia, serif;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+}
+
+.menu-heading p {
+  margin: 30px 0 0;
+  max-width: 11.5em;
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  font-size: clamp(1.8rem, 2.65vw, 3rem);
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0.07em;
+  text-wrap: balance;
+}
+
+html.menu-open,
+html.menu-open body {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+.menu-overlay nav {
+  display: grid;
+}
+
+.menu-overlay nav a {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  align-items: center;
+  min-height: 62px;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  transition: opacity 0.35s ease, padding-left 0.35s ease;
+}
+
+.menu-overlay nav a:hover {
+  padding-left: 8px;
+}
+
+.menu-overlay nav small {
+  font: 9px Georgia, serif;
+  color: var(--gold);
+}
+
+.menu-overlay nav span {
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  font-size: clamp(1.05rem, 1.5vw, 1.45rem);
+  letter-spacing: 0.1em;
+}
+
+.menu-note {
+  position: absolute;
+  right: clamp(28px, 8vw, 140px);
+  bottom: 36px;
+  margin: 0;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+@keyframes menu-fade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 767px) {
+  .theme-label { display: none; }
+  .menu-overlay { grid-template-columns: 1fr; gap: 44px; align-content: center; padding: 90px 24px 70px; }
+  .menu-heading p { margin-top: 18px; font-size: 1.65rem; }
+  .menu-overlay nav a { min-height: 54px; }
+  .menu-note { right: 24px; bottom: 24px; left: 24px; }
+}

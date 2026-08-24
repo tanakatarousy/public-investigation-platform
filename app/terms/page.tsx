@@ -1,0 +1,3 @@
+import type {Metadata} from "next";import {PublicShell} from "../components/PublicShell";import {BRAND} from "../brand-config";import {publicMetadata} from "../seo";
+export const metadata:Metadata=publicMetadata({path:"/terms",title:`利用規約｜${BRAND.name}`,description:"公開情報の位置づけ、緊急時の連絡先、禁止事項、警察公式情報・外部リンクの確認について定めます。"});
+export default function Page(){return <PublicShell kicker="TERMS" title="利用規約"><div className="prose"><h2>情報の位置づけ</h2><p>当サイトは公式公開情報の検索・整理を支援するもので、警察機関ではありません。捜査判断、本人認定、法律上の助言を提供しません。</p><h2>緊急時</h2><p>事件・事故が今起きている場合は110番、緊急でない相談は警察相談専用電話 #9110 等の公式窓口を利用してください。</p><h2>禁止事項</h2><p>掲載対象者への接触・追跡・私的制裁、虚偽情報の拡散、過度な自動取得、サービス妨害を禁止します。</p><h2>外部リンク</h2><p>公式情報の状態はリンク先で必ず再確認してください。</p></div></PublicShell>}

@@ -1,0 +1,4 @@
+import type {Metadata} from "next";import Script from "next/script";import {PublicShell} from "../components/PublicShell";import {BRAND} from "../brand-config";import {publicMetadata} from "../seo";import {runtimeEnv} from "../server/platform-db";import {TipsWizard} from "./tips-wizard";
+export const dynamic="force-dynamic";
+export const metadata:Metadata=publicMetadata({path:"/tips",title:`匿名で目撃情報を入力する｜${BRAND.name}`,description:"アカウント登録なしで、目撃した人物・時間・場所・方向・一致点と違和感を匿名入力できます。"});
+export default async function Page(){let key:string|undefined;try{key=(await runtimeEnv()).TURNSTILE_SITE_KEY}catch{}return <PublicShell kicker="ANONYMOUS SIGHTING / NO ACCOUNT" title="目撃情報を入力する" intro="アカウント登録なしで、目撃した場所と時間を匿名で地図へ共有できます。"><TipsWizard turnstileSiteKey={key}/>{key&&<Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="afterInteractive"/>}</PublicShell>}

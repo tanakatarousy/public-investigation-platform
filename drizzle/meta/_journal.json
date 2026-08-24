@@ -1,0 +1,83 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1787411561893,
+      "tag": "0000_clever_the_hood",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1787452618823,
+      "tag": "0001_wild_squadron_sinister",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1787453503614,
+      "tag": "0002_shocking_steve_rogers",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1787454115667,
+      "tag": "0003_seed_public_records",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1787480626919,
+      "tag": "0004_free_weapon_omega",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1787484900000,
+      "tag": "0005_refresh_public_payloads",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1787499754624,
+      "tag": "0006_clean_bushwacker",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1787500500000,
+      "tag": "0007_refresh_brand_photo_metadata",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1787504435035,
+      "tag": "0008_clean_annihilus",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "6",
+      "when": 1787512200000,
+      "tag": "0009_refresh_wanted_registry",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "6",
+      "when": 1787512678589,
+      "tag": "0010_naive_james_howlett",
+      "breakpoints": true
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+"use client";export default function Error({reset}:{reset:()=>void}){return <main className="error-page"><p className="kicker">ERROR FALLBACK</p><h1>表示を続けられませんでした</h1><p>公開データの一部が一時的に利用できません。</p><button onClick={reset}>再試行</button></main>}

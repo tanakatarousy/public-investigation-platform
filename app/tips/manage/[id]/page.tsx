@@ -1,0 +1,2 @@
+import {PublicShell} from "../../../components/PublicShell";import {TipManager} from "./tip-manager";
+export default async function Page({params}:{params:Promise<{id:string}>}){const {id}=await params;return <PublicShell kicker="PRIVATE MANAGEMENT / ANONYMOUS" title="目撃情報を管理する" intro="管理情報はこの端末からだけ送信します。管理リンクのsecretはURL fragmentから読み取り、サーバーにはAuthorization headerで渡します。"><TipManager id={id}/></PublicShell>}
