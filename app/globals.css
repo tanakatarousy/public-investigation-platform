@@ -92,3 +92,18 @@ body{background-color:var(--paper);background-image:url('/assets/textures/washi-
 @media(max-width:1180px){.admin-stats{grid-template-columns:repeat(3,1fr)}.analytics-overview{grid-template-columns:1fr}.analytics-grid{grid-template-columns:1fr}.admin-table article{grid-template-columns:minmax(220px,1fr) 110px auto}.admin-table article>time{display:none}}
 @media(max-width:900px){.admin-shell{display:block}.admin-shell>header{padding:20px}.admin-shell>nav{position:sticky;z-index:20;top:0;display:flex;flex-direction:row;height:auto;padding:10px 12px;overflow-x:auto}.admin-shell>nav::before{display:none}.admin-shell>nav button{width:auto;flex:none;padding:9px 12px;border:0;border-bottom:2px solid transparent}.admin-shell>nav button.active{border-left:0;border-bottom-color:var(--admin-accent)}.admin-shell>.admin-status{margin:14px 20px 0}.admin-shell>section{padding:18px 20px 40px}.analytics-kpis{grid-template-columns:repeat(2,1fr)}.event-list article{grid-template-columns:120px minmax(160px,1fr) 110px}.event-list span{display:none}}
 @media(max-width:620px){.admin-shell>header{align-items:flex-start}.admin-shell>header span{max-width:48%;font-size:8px}.admin-stats{grid-template-columns:1fr 1fr}.admin-table article{grid-template-columns:1fr;gap:8px}.admin-table article>div:last-child{justify-content:flex-start}.analytics-overview{padding:22px 18px}.analytics-kpis{border-left:0;border-top:1px solid var(--admin-line)}.analytics-kpis>div{padding:14px;border-bottom:1px solid var(--admin-line)}.admin-analytics>.analytics-self{align-items:flex-start;flex-direction:column}.visitor-list article{grid-template-columns:minmax(0,1fr) 34px 60px;padding-inline:12px}.event-list article{grid-template-columns:1fr 1fr}.event-list time{text-align:left}.event-list code{grid-column:1/-1}.path-list article{grid-template-columns:24px minmax(0,1fr) 30px}.path-list i{display:none}}
+
+
+/* Password-only admin login for the Cloudflare deployment. */
+.admin-login-shell{min-height:100vh;display:grid;place-items:center;padding:32px;background:var(--background,#f5f1e8)}
+.admin-login-card{width:min(100%,460px);padding:36px;border:1px solid rgba(26,20,16,.18);background:var(--surface,#fff);box-shadow:0 24px 70px rgba(26,20,16,.12)}
+.admin-login-card small{letter-spacing:.16em;font-weight:700}
+.admin-login-card h1{margin:.55rem 0 1rem;font-size:clamp(2rem,7vw,3.5rem)}
+.admin-login-card form{display:grid;gap:12px;margin:28px 0 18px}
+.admin-login-card label{font-weight:700}
+.admin-login-card input{width:100%;padding:14px;border:1px solid rgba(26,20,16,.28);background:#fff;color:#17120e;font:inherit}
+.admin-login-card button,.admin-account button{border:0;padding:12px 18px;background:#17120e;color:#fff;font:inherit;font-weight:700;cursor:pointer}
+.admin-login-error{color:#a51f1f;font-weight:700}
+.admin-account{display:flex;align-items:center;gap:14px}
+.admin-account form{margin:0}
+.admin-account button{padding:8px 12px}
