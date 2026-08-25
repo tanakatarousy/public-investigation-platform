@@ -2,7 +2,7 @@ import {cases,mapRecords,sources,subjects} from "../data/platform";
 
 export type ContentKind="wanted"|"case"|"source"|"map";
 export type StoredContent={id:string;kind:ContentKind;slug:string;title:string;payload:Record<string,unknown>;publishState:"draft"|"published"|"withdrawn"|"correction";revision:number;publishedAt:string|null;withdrawnAt:string|null;correctionNote:string|null;updatedAt:string};
-type RuntimeEnv={DB?:D1Database;BUCKET?:R2Bucket;ADMIN_EMAIL?:string;TURNSTILE_SITE_KEY?:string;TURNSTILE_SECRET?:string;TREND_HMAC_SECRET?:string;TIPS_SECRET_PEPPER?:string;TIPS_RATE_HMAC_SECRET?:string;VIEW_METRICS_ENABLED?:string;TREND_SAMPLE_RATE?:string;TREND_PUBLIC_ENABLED?:string};
+export type RuntimeEnv={DB?:D1Database;BUCKET?:R2Bucket;ADMIN_PASSWORD?:string;ADMIN_SESSION_SECRET?:string;TURNSTILE_SITE_KEY?:string;TURNSTILE_SECRET?:string;TREND_HMAC_SECRET?:string;TIPS_SECRET_PEPPER?:string;TIPS_RATE_HMAC_SECRET?:string;VIEW_METRICS_ENABLED?:string;TREND_SAMPLE_RATE?:string;TREND_PUBLIC_ENABLED?:string};
 let testRuntimeEnv:RuntimeEnv|undefined;
 
 export function setRuntimeEnvForTests(value:RuntimeEnv|undefined){testRuntimeEnv=value}
