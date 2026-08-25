@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
+import Link from "next/link";
 import { ADMIN_SESSION_COOKIE, adminIdentityFromToken } from "../server/admin-auth";
 import { AdminConsole } from "./admin-console";
 
@@ -27,7 +28,7 @@ export default async function Page({ searchParams }: Props) {
         </form>
         {error === "invalid" && <p className="admin-login-error">パスワードが正しくありません。</p>}
         {error === "setup" && <p className="admin-login-error">管理者認証のSecret設定を確認してください。</p>}
-        <a href="/">公開サイトへ戻る</a>
+        <Link href="/">公開サイトへ戻る</Link>
       </section>
     </main>
   );
