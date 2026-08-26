@@ -18,7 +18,7 @@ const localBindingConfig = {
       binding: "DB",
       database_name: process.env.CLOUDFLARE_D1_DATABASE_NAME ?? "public-investigation-platform",
       database_id: process.env.CLOUDFLARE_D1_DATABASE_ID ?? DEFAULT_DATABASE_ID,
-      migrations_dir: "./drizzle",
+      migrations_dir: "../../drizzle",
     },
   ],
 };
