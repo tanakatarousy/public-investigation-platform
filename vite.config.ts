@@ -1,7 +1,7 @@
 import vinext from "vinext";
 import { defineConfig } from "vite";
 
-const SITE_CREATOR_PLACEHOLDER_DATABASE_ID = "00000000-0000-4000-8000-000000000000";
+const DEFAULT_DATABASE_ID = "afd34793-debf-4b9a-b386-45d62dff3378";
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
 
 const localBindingConfig = {
@@ -17,7 +17,8 @@ const localBindingConfig = {
     {
       binding: "DB",
       database_name: process.env.CLOUDFLARE_D1_DATABASE_NAME ?? "public-investigation-platform",
-      database_id: process.env.CLOUDFLARE_D1_DATABASE_ID ?? SITE_CREATOR_PLACEHOLDER_DATABASE_ID,
+      database_id: process.env.CLOUDFLARE_D1_DATABASE_ID ?? DEFAULT_DATABASE_ID,
+      migrations_dir: "./drizzle",
     },
   ],
 };
